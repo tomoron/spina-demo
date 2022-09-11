@@ -46,6 +46,8 @@ gem 'dotenv-rails'
 
 gem 'tailwindcss-rails'
 
+gem 'spina'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
