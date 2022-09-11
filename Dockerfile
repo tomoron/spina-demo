@@ -16,7 +16,7 @@ RUN apk update && \
     postgresql-dev \
     tzdata \
     git &&\
-    gem install bundler && bundle install -j4
+    gem install bundler && bundle install -j4 --path vendor/bundle
 
 FROM ruby:3.1.2-alpine as runner
 
@@ -35,7 +35,7 @@ RUN apk update && \
 
 WORKDIR ${ROOT}
 
-COPY --from=builder /usr/local/bundle /usr/local/bundle
+COPY --from=builder ${ROOT}/vendor/bundle ${ROOT}/vendor/bundle
 COPY . ${ROOT}
 COPY entrypoint.sh /usr/bin/
 
