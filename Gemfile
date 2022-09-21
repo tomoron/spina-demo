@@ -48,6 +48,8 @@ gem 'tailwindcss-rails'
 
 gem 'spina'
 
+gem 'pry-byebug'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
